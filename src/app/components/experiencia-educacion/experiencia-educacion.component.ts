@@ -22,10 +22,12 @@ export class ExperienciaEducacionComponent implements OnInit {
   ) {}
 
   isLogged = false;
+  isAdmin: any;
 
   ngOnInit(): void {
     this.cargarExperiencia();
     this.cargarEducacion();
+    this.userAuthorithies();
     this.tokenService.getToken()
       ? (this.isLogged = true)
       : (this.isLogged = false);
@@ -67,5 +69,14 @@ export class ExperienciaEducacionComponent implements OnInit {
         }
       );
     }
+  }
+
+  userAuthorithies() {
+    const authorithies: String[] = this.tokenService.getAuthorities();
+    //Este console.log lo hice solamente para verificar la estructura del dato
+    //que me retorna el metodo getAuthorities
+    console.log('AUTHORITIES', authorithies);
+
+    return (this.isAdmin = authorithies);
   }
 }

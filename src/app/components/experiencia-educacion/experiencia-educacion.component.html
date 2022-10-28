@@ -36,6 +36,9 @@
 </section> -->
 
 <section class="card">
+  <div>
+    <p *ngIf="isAdmin.length > 1">SOY ADMIN</p>
+  </div>
   <div class="contenido-seccion">
     <div
       style="display: flex; justify-content: space-between; margin-bottom: 2rem"
@@ -44,7 +47,7 @@
       <button
         class="btn btn-primary mt-3"
         routerLink="/nuevaexperiencia"
-        *ngIf="isLogged"
+        *ngIf="isAdmin.length > 1"
       >
         Nueva +
       </button>
@@ -55,8 +58,8 @@
         <tr>
           <th scope="col">Nombre</th>
           <th scope="col">Descripcion</th>
-          <th *ngIf="isLogged" scope="col">Editar</th>
-          <th *ngIf="isLogged" scope="col">Eliminar</th>
+          <th *ngIf="isAdmin.length > 1" scope="col">Editar</th>
+          <th *ngIf="isAdmin.length > 1" scope="col">Eliminar</th>
         </tr>
       </thead>
       <tbody>
@@ -71,12 +74,12 @@
             </h3>
           </td>
           <td>{{ experiencia.descripcionExp }}</td>
-          <td *ngIf="isLogged">
+          <td *ngIf="isAdmin.length > 1">
             <a routerLink="/editexp/{{ experiencia.id }}">
               <i class="fa-regular fa-pen-to-square"></i>
             </a>
           </td>
-          <td *ngIf="isLogged">
+          <td *ngIf="isAdmin.length > 1">
             <i
               (click)="deleteExperiencia(experiencia.id)"
               class="fa-regular fa-trash-can"
@@ -94,7 +97,7 @@
       <button
         class="btn btn-primary mt-3"
         routerLink="/nuevaeducacion"
-        *ngIf="isLogged"
+        *ngIf="isAdmin.length > 1"
       >
         Nueva +
       </button>
@@ -105,8 +108,8 @@
         <tr>
           <th scope="col">Institucion</th>
           <th scope="col">Carrera/Curso</th>
-          <th *ngIf="isLogged" scope="col">Editar</th>
-          <th *ngIf="isLogged" scope="col">Eliminar</th>
+          <th *ngIf="isAdmin.length > 1" scope="col">Editar</th>
+          <th *ngIf="isAdmin.length > 1" scope="col">Eliminar</th>
         </tr>
       </thead>
       <tbody>
@@ -118,12 +121,12 @@
             </h4>
           </td>
           <td>{{ edu.descripcionEdu }}</td>
-          <td *ngIf="isLogged">
+          <td *ngIf="isAdmin.length > 1">
             <a routerLink="/editedu/{{ edu.id }}">
               <i class="fa-regular fa-pen-to-square"></i>
             </a>
           </td>
-          <td *ngIf="isLogged">
+          <td *ngIf="isAdmin.length > 1">
             <i
               (click)="deleteEducacion(edu.id)"
               class="fa-regular fa-trash-can"
