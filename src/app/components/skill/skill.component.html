@@ -1,0 +1,48 @@
+<section class="card py-3">
+  <div
+    class="contenido-seccion d-flex justify-content-between align-items-center"
+  >
+    <h2>Hard & Soft Skills</h2>
+    <button
+      class="btn btn-primary"
+      routerLink="/nuevaskill"
+      *ngIf="isAdmin.length > 1"
+    >
+      Nueva +
+    </button>
+  </div>
+
+  <div class="d-flex flex-wrap">
+    <article
+      *ngFor="let skill of skills"
+      class="d-flex flex-column align-items-center w-25"
+    >
+      <circle-progress
+        [percent]="skill.porcentaje"
+        [radius]="100"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [animationDuration]="300"
+        [title]="skill.nombre"
+      ></circle-progress>
+      <div class=""></div>
+
+      <div class="d-flex align-center justify-center">
+        <i
+          *ngIf="isAdmin.length > 1"
+          routerLink="/editskill/{{ skill.id }}"
+          class="fa-regular fa-pen-to-square mx-3"
+        ></i>
+
+        <i
+          *ngIf="isAdmin.length > 1"
+          (click)="deleteSkill(skill.id)"
+          class="fa-regular fa-trash-can mx-3"
+        ></i>
+      </div>
+    </article>
+  </div>
+</section>

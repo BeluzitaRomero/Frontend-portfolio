@@ -1,0 +1,44 @@
+<section class="container">
+  <div class="row">
+    <h2 class="my-4">Cargar nueva skill</h2>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group my-4">
+        <label for="nombreExp" class="form-label"
+          ><b>Nombre de empresa</b></label
+        >
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="nombre"
+          id="nombre"
+          [(ngModel)]="nombre"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="porcentaje" class="form-label"><b>porcentaje </b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="porcentaje"
+          id="porcentaje"
+          [(ngModel)]="porcentaje"
+          required
+        />
+      </div>
+      <!-- <div class="form-group my-4">
+          <label for="img" class="form-label"><b>Imagen (opcional)</b></label>
+          <input
+            class="form-control shadow-sm"
+            type="text"
+            name="img"
+            id="img"
+            [(ngModel)]="img"
+            required
+          />
+        </div> -->
+
+      <button class="btn btn-primary mt-3">Agregar eriencia</button>
+    </form>
+  </div>
+</section>

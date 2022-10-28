@@ -20,6 +20,10 @@ import { NuevaExperienciaComponent } from './components/experiencia-educacion/nu
 import { EditExperienciaComponent } from './components/experiencia-educacion/edit-experiencia/edit-experiencia.component';
 import { NuevaEducacionComponent } from './components/experiencia-educacion/nueva-educacion/nueva-educacion.component';
 import { EditEducacionComponent } from './components/experiencia-educacion/edit-educacion/edit-educacion.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { NuevaSkillComponent } from './components/skill/nueva-skill/nueva-skill.component';
+import { EditSkillComponent } from './components/skill/edit-skill/edit-skill.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -37,8 +41,17 @@ import { EditEducacionComponent } from './components/experiencia-educacion/edit-
     EditExperienciaComponent,
     NuevaEducacionComponent,
     EditEducacionComponent,
+    SkillComponent,
+    NuevaSkillComponent,
+    EditSkillComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgCircleProgressModule.forRoot({}),
+  ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
 })
