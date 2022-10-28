@@ -7,7 +7,8 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root',
 })
 export class SExperienciaService {
-  experienciaURL = 'http://localhost:8080/explab/';
+  // experienciaURL = 'http://localhost:8080/explab/';
+  experienciaURL = 'https://portfolio-belen-romero.herokuapp.com/explab/';
   constructor(private httpClient: HttpClient) {}
 
   //aca traigo un array de experiencias
