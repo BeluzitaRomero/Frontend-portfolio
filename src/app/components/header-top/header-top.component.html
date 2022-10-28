@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="login()" *ngIf="!isLogged">
+  Ingresar
+</button>
+<button class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">
+  Cerrar sesion
+</button>

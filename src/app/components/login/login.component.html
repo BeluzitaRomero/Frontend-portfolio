@@ -1,0 +1,33 @@
+<form #f="ngForm" (ngSubmit)="onLogin()" class="col-4 m-auto mt-5">
+  <div class="mb-3">
+    <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nombreUsuario"
+      name="nombreUsuario"
+      aria-describedby="emailHelp"
+      [(ngModel)]="nombreUsuario"
+      required
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Contraseña</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-control"
+      [(ngModel)]="password"
+      required
+    />
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

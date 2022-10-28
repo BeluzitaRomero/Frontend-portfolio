@@ -1,0 +1,42 @@
+<section class="card">
+  <app-header-top></app-header-top>
+  <div>
+    <img
+      class="banner"
+      src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt=""
+    />
+  </div>
+  <div class="contenido-seccion">
+    <!--Data binding:  property binding para traer data de atributos como el src-->
+    <!-- se usan corchetes en el atributo, comillas para el valor -->
+    <img class="img-perfil" [src]="persona.img" alt="" />
+
+    <a href="#"><i class="fa-solid fa-pen"></i></a>
+
+    <h1>{{ persona.nombre }} {{ persona.apellido }}</h1>
+    <p>Tutora React Js en Coderhouse</p>
+    <div class="info">
+      <div>
+        <p>Buenos Aires (Argentina)</p>
+        <p>Informacion de contacto</p>
+      </div>
+
+      <!--Data binding:  property binding para traer data de atributos como el src-->
+      <!-- se usan corchetes en el atributo, comillas para el valor -->
+      <div class="info-logo">
+        <!-- <img
+            [src]="miPortfolio?.empresa"
+            alt="logo CODERHOUSE"
+            style="width: 5rem"
+          /> -->
+        <h3>CODERHOUSE</h3>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary">Tengo interes en</button>
+      <button type="button" class="btn btn-light">Añadir seccion</button>
+      <button type="button" class="btn btn-light">Mas</button>
+    </div>
+  </div>
+</section>

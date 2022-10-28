@@ -1,0 +1,47 @@
+<div class="container" *ngIf="experienciaLab">
+  <div class="row">
+    <h2 class="my-4">Editar una experiencia laboral</h2>
+
+    <form (ngSubmit)="update()" novalidate #f="ngForm">
+      <div class="form-group my-4">
+        <label for="nombreExp" class="form-label"
+          ><b>Nombre de empresa</b></label
+        >
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="nombreExp"
+          id="nombreExp"
+          [(ngModel)]="experienciaLab.nombreExp"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="descripcionExp" class="form-label"
+          ><b>Descripcion de puesto</b></label
+        >
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="descripcionExp"
+          id="descripcionExp"
+          [(ngModel)]="experienciaLab.descripcionExp"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="imgExp" class="form-label"><b>Imagen(Opcional)</b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="imgExp"
+          id="imgExp"
+          [(ngModel)]="experienciaLab.imgExp"
+          required
+        />
+      </div>
+
+      <button class="btn btn-primary mt-3">Actualizar experiencia</button>
+    </form>
+  </div>
+</div>
