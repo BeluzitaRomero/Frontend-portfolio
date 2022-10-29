@@ -20,7 +20,6 @@ export class NuevaSkillComponent implements OnInit {
     const skill = new Skill(this.nombre, this.porcentaje);
     this.sSkill.save(skill).subscribe(
       (data) => {
-        console.log('nueva skill: ', data);
         alert('Skill agregada');
         this.router.navigate(['']);
       },

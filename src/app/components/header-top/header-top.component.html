@@ -1,6 +1,25 @@
-<button class="btn btn-primary" (click)="login()" *ngIf="!isLogged">
-  Ingresar
-</button>
-<button class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">
-  Cerrar sesion
-</button>
+<nav class="d-flex justify-content-between">
+  <img src="https://i.postimg.cc/ydmMR6wT/Dise-o-sin-t-tulo-17.png" alt="" />
+  <div class="d-flex">
+    <ul class="d-flex align-items-center list-nav-items">
+      <li>
+        <a href=""
+          ><img src="https://i.postimg.cc/SsnwZ72D/facebook.png" alt=""
+        /></a>
+      </li>
+      <li>
+        <a href=""
+          ><img src="https://i.postimg.cc/rFjQrRzm/instagram.png" alt=""
+        /></a>
+      </li>
+      <li>
+        <button class="btn btn-primary" (click)="login()" *ngIf="!isLogged">
+          Ingresar
+        </button>
+        <button class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">
+          Cerrar sesión
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>

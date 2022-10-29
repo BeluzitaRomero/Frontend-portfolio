@@ -1,11 +1,44 @@
 <section class="card">
-  <h1>Logros</h1>
-  <p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit commodi
-    quam cum maiores esse itaque ipsam laborum, numquam, nobis labore vel fuga!
-    Optio, cumque? Aspernatur necessitatibus ipsum aliquam non cum!
-  </p>
-  <h2>proyectos</h2>
-  <a href="#"><i class="fa-solid fa-pen"></i></a>
-  <p>Links: dadawfasefservser</p>
+  <div
+    class="contenido-seccion d-flex justify-content-between align-items-center"
+  >
+    <h2>Proyectos realizados</h2>
+    <button
+      class="btn btn-primary"
+      routerLink="/nuevoProyecto"
+      *ngIf="isAdmin.length > 1"
+    >
+      Nueva +
+    </button>
+  </div>
+
+  <div class="contenido-seccion" *ngFor="let proyecto of proyectos">
+    <div class="d-flex justify-content-between">
+      <h3 class="titulo-proyecto">{{ proyecto.nombreProyecto }}</h3>
+      <div>
+        <i
+          *ngIf="isAdmin.length > 1"
+          routerLink="/editProyecto/{{ proyecto.id }}"
+          class="fa-regular fa-pen-to-square mx-3"
+        ></i>
+
+        <i
+          *ngIf="isAdmin.length > 1"
+          (click)="deleteProyecto(proyecto.id)"
+          class="fa-regular fa-trash-can mx-3"
+        ></i>
+      </div>
+    </div>
+
+    <h5>Descripcion:</h5>
+    <p class="descripcion-proyecto">{{ proyecto.descripcionProyecto }}</p>
+    <h5>Puedes ver el deploy en:</h5>
+    <a href="https://tiendamoon.netlify.app/">{{
+      proyecto.linkDeployProyecto
+    }}</a>
+    <h5>Puedes ver el repositorio en:</h5>
+    <a href="https://github.com/BeluzitaRomero/proyecto-react-js">{{
+      proyecto.linkRepoProyecto
+    }}</a>
+  </div>
 </section>

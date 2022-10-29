@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ExperienciaEducacionComponent } from './components/experiencia-educacion/experiencia-educacion.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,6 +24,8 @@ import { NuevaSkillComponent } from './components/skill/nueva-skill/nueva-skill.
 import { EditSkillComponent } from './components/skill/edit-skill/edit-skill.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditHeaderComponent } from './components/header/edit-header/edit-header.component';
+import { NuevoProyectoComponent } from './components/logros/nuevo-proyecto/nuevo-proyecto.component';
+import { EditProyectoComponent } from './components/logros/edit-proyecto/edit-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { EditHeaderComponent } from './components/header/edit-header/edit-header
     HomeComponent,
     HeaderComponent,
     AcercaDeComponent,
-    AptitudesComponent,
     ContactoComponent,
     ExperienciaEducacionComponent,
     LoginComponent,
@@ -46,6 +46,8 @@ import { EditHeaderComponent } from './components/header/edit-header/edit-header
     NuevaSkillComponent,
     EditSkillComponent,
     EditHeaderComponent,
+    NuevoProyectoComponent,
+    EditProyectoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,29 @@
 <section class="card">
   <div class="contenido-seccion">
+    <!--Data binding:  property binding para traer data de atributos como el src-->
+    <!-- se usan corchetes en el atributo, comillas para el valor -->
+    <img class="img-perfil" [src]="persona.img" alt="" />
+
+    <i
+      *ngIf="isAdmin.length > 1"
+      routerLink="/edit-datospersonales/{{ persona.id }}"
+      class="fa-regular fa-pen-to-square mx-3"
+    ></i>
+
+    <h1>{{ persona.nombre }} {{ persona.apellido }}</h1>
+    <p>Desarrolladora Fullstack Jr</p>
+    <div class="info">
+      <div>
+        <p>{{ persona.localidad }}, {{ persona.pais }}</p>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary">Tengo interes en</button>
+      <button type="button" class="btn btn-light">Añadir seccion</button>
+      <button type="button" class="btn btn-light">Mas</button>
+    </div>
+  </div>
+  <div class="contenido-seccion">
     <h1>Acerca de</h1>
     <p>
       {{ persona.descripcion }}

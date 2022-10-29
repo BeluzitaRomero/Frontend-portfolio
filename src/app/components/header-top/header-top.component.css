@@ -1,0 +1,15 @@
+nav {
+  background-color: rgb(129, 172, 172);
+}
+
+nav ul {
+  list-style: none;
+}
+
+.list-nav-items li {
+  margin: 0 0.5rem;
+}
+
+.list-nav-items li img {
+  width: 3rem;
+}
