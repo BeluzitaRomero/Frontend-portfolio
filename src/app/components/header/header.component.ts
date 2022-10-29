@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-header',
@@ -8,19 +9,27 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  isLogged = false;
+  isAdmin: any;
+  persona: Persona = new Persona('', '', '', '', '', '');
 
-  //del video de guia
-  //1)
-  persona: Persona = new Persona('', '', '');
-
-  //2)
-  constructor(public personaService: PersonaService) {}
+  constructor(
+    public personaService: PersonaService,
+    private tokenService: TokenService
+  ) {}
 
   ngOnInit(): void {
-    //3)
-    this.personaService.getPersona().subscribe((data) => {
+    this.userAuthorithies();
+    this.personaService.detail(2).subscribe((data) => {
       this.persona = data;
     });
+  }
+
+  userAuthorithies() {
+    const authorithies: String[] = this.tokenService.getAuthorities();
+    //Este console.log lo hice solamente para verificar la estructura del dato
+    //que me retorna el metodo getAuthorities
+    console.log('AUTHORITIES', authorithies);
+
+    return (this.isAdmin = authorithies);
   }
 }

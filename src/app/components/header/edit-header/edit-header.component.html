@@ -1,0 +1,80 @@
+<div class="container" *ngIf="persona">
+  <div class="row">
+    <h2 class="my-4">Editar datos personales</h2>
+
+    <form (ngSubmit)="update()" novalidate #f="ngForm">
+      <div class="form-group my-4">
+        <label for="nombre" class="form-label"><b>Nombre</b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="nombre"
+          id="nombre"
+          [(ngModel)]="persona.nombre"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="apellido" class="form-label"><b>Apellido</b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="apellido"
+          id="apellido"
+          [(ngModel)]="persona.apellido"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="descripcion" class="form-label"
+          ><b>Descripcion personal</b></label
+        >
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="descripcion"
+          id="descripcion"
+          [(ngModel)]="persona.descripcion"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="img" class="form-label"><b>Imagen</b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="img"
+          id="img"
+          [(ngModel)]="persona.img"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="localidad" class="form-label"
+          ><b>Localidad de residencia</b></label
+        >
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="localidad"
+          id="localidad"
+          [(ngModel)]="persona.localidad"
+          required
+        />
+      </div>
+      <div class="form-group my-4">
+        <label for="pais" class="form-label"><b>Pais</b></label>
+        <input
+          class="form-control shadow-sm"
+          type="text"
+          name="pais"
+          id="pais"
+          [(ngModel)]="persona.pais"
+          required
+        />
+      </div>
+
+      <button class="btn btn-primary mt-3">Actualizar datos personales</button>
+    </form>
+  </div>
+</div>

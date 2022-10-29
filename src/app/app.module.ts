@@ -24,6 +24,7 @@ import { SkillComponent } from './components/skill/skill.component';
 import { NuevaSkillComponent } from './components/skill/nueva-skill/nueva-skill.component';
 import { EditSkillComponent } from './components/skill/edit-skill/edit-skill.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { EditHeaderComponent } from './components/header/edit-header/edit-header.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     SkillComponent,
     NuevaSkillComponent,
     EditSkillComponent,
+    EditHeaderComponent,
   ],
   imports: [
     BrowserModule,

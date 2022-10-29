@@ -21,16 +21,13 @@ export class ExperienciaEducacionComponent implements OnInit {
     private sEducacion: EducacionService
   ) {}
 
-  isLogged = false;
   isAdmin: any;
 
   ngOnInit(): void {
     this.cargarExperiencia();
     this.cargarEducacion();
     this.userAuthorithies();
-    this.tokenService.getToken()
-      ? (this.isLogged = true)
-      : (this.isLogged = false);
+    this.tokenService.getToken();
   }
 
   cargarExperiencia(): void {
