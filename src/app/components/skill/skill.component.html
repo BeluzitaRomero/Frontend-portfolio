@@ -1,18 +1,12 @@
-<section class="container">
-  <div
-    class="contenido-seccion d-flex justify-content-between align-items-center"
-  >
-    <h1 class="flex-fill">Hard & Soft Skills</h1>
-    <button
-      class="btn btn-primary"
-      routerLink="/nuevaskill"
-      *ngIf="isAdmin.length > 1"
-    >
+<section class="container separador-secciones">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1 class="flex-fill mb-5">Hard & Soft Skills</h1>
+    <button class="btn" routerLink="/nuevaskill" *ngIf="isAdmin.length > 1">
       Nueva +
     </button>
   </div>
 
-  <div class="row mb-5">
+  <div class="row">
     <article
       *ngFor="let skill of skills"
       class="col-sm-6 col-md-4 col-lg-4 d-flex flex-column align-items-center my-3"

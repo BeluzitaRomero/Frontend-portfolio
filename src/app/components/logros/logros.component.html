@@ -1,7 +1,5 @@
-<section class="container m-auto">
-  <div
-    class="contenido-seccion d-flex justify-content-between align-items-center"
-  >
+<section class="container separador-secciones">
+  <div class="d-flex justify-content-between align-items-center mb-5">
     <h1 class="flex-fill">Proyectos realizados</h1>
     <button
       class="btn btn-primary"
@@ -12,10 +10,7 @@
     </button>
   </div>
 
-  <div
-    class="contenido-seccion shadow-lg p-4"
-    *ngFor="let proyecto of proyectos"
-  >
+  <div class="" *ngFor="let proyecto of proyectos">
     <div class="d-flex justify-content-between">
       <h2 class="titulo-proyecto my-3">
         <img
@@ -41,7 +36,7 @@
     </div>
 
     <div class="row">
-      <div class="col">
+      <div class="col-sm-12 col-md-12 col-lg-6 mb-5">
         <h3>Descripción:</h3>
         <p class="descripcion-proyecto">{{ proyecto.descripcionProyecto }}</p>
         <h5 class="link-deploy">Puedes ver el deploy en:</h5>
@@ -59,7 +54,7 @@
           >{{ proyecto.linkRepoProyecto }}</a
         >
       </div>
-      <div class="col px-0 div-img-proyecto">
+      <div class="col-sm-12 col-md-12 col-lg-6 px-0 div-img-proyecto">
         <!-- <div
           id="carouselExampleFade"
           class="carousel slide carousel-fade"
@@ -98,5 +93,6 @@
         <img class="img-proyecto img-fluid" [src]="proyecto.img1" alt="" />
       </div>
     </div>
+    <hr />
   </div>
 </section>

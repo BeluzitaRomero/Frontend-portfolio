@@ -14,6 +14,16 @@ table {
   font-size: 1.6rem;
 }
 
+.nombre-tabla,
 .tabla-descripcion {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.t-borrar,
+.t-editar {
+  width: 20%;
+}
+.t-nombre,
+.t-descripcion {
+  width: 40%;
 }
