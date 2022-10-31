@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class HeaderTopComponent implements OnInit {
   isLogged: boolean = false;
   showNav: boolean = false;
-  size: number;
+  // size: number;
 
   constructor(private router: Router, private toeknService: TokenService) {}
 
@@ -34,9 +34,9 @@ export class HeaderTopComponent implements OnInit {
   toggleNav() {
     this.showNav = !this.showNav;
   }
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    console.log(this.size);
-    this.size = event.target.innerWidth;
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   console.log(this.size);
+  //   this.size = event.target.innerWidth;
+  // }
 }
