@@ -1,8 +1,8 @@
-<section class="card">
+<section class="container m-auto">
   <div
     class="contenido-seccion d-flex justify-content-between align-items-center"
   >
-    <h2>Proyectos realizados</h2>
+    <h1 class="flex-fill">Proyectos realizados</h1>
     <button
       class="btn btn-primary"
       routerLink="/nuevoProyecto"
@@ -12,9 +12,19 @@
     </button>
   </div>
 
-  <div class="contenido-seccion" *ngFor="let proyecto of proyectos">
+  <div
+    class="contenido-seccion shadow-lg p-4"
+    *ngFor="let proyecto of proyectos"
+  >
     <div class="d-flex justify-content-between">
-      <h3 class="titulo-proyecto">{{ proyecto.nombreProyecto }}</h3>
+      <h2 class="titulo-proyecto my-3">
+        <img
+          class="icono-proyecto"
+          src="https://i.postimg.cc/RZhFYTht/project-management.png"
+          alt=""
+        />
+        {{ proyecto.nombreProyecto }}
+      </h2>
       <div>
         <i
           *ngIf="isAdmin.length > 1"
@@ -30,15 +40,63 @@
       </div>
     </div>
 
-    <h5>Descripcion:</h5>
-    <p class="descripcion-proyecto">{{ proyecto.descripcionProyecto }}</p>
-    <h5>Puedes ver el deploy en:</h5>
-    <a href="https://tiendamoon.netlify.app/">{{
-      proyecto.linkDeployProyecto
-    }}</a>
-    <h5>Puedes ver el repositorio en:</h5>
-    <a href="https://github.com/BeluzitaRomero/proyecto-react-js">{{
-      proyecto.linkRepoProyecto
-    }}</a>
+    <div class="row">
+      <div class="col">
+        <h3>Descripción:</h3>
+        <p class="descripcion-proyecto">{{ proyecto.descripcionProyecto }}</p>
+        <h5 class="link-deploy">Puedes ver el deploy en:</h5>
+        <a
+          class="links-proyectos"
+          href="https://tiendamoon.netlify.app/"
+          target="_blank"
+          >{{ proyecto.linkDeployProyecto }}</a
+        >
+        <h5 class="link-repo">Puedes ver el repositorio en:</h5>
+        <a
+          class="links-proyectos"
+          href="https://github.com/BeluzitaRomero/proyecto-react-js"
+          target="_blank"
+          >{{ proyecto.linkRepoProyecto }}</a
+        >
+      </div>
+      <div class="col px-0 div-img-proyecto">
+        <div
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img [src]="proyecto.img1" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img [src]="proyecto.img2" class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img [src]="proyecto.img3" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- <img class="img-proyecto" [src]="proyecto.img1" alt="" /> -->
+      </div>
+    </div>
   </div>
 </section>

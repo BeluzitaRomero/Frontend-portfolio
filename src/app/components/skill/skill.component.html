@@ -1,8 +1,8 @@
-<section class="card py-3">
+<section class="container m-auto">
   <div
     class="contenido-seccion d-flex justify-content-between align-items-center"
   >
-    <h2>Hard & Soft Skills</h2>
+    <h1 class="flex-fill">Hard & Soft Skills</h1>
     <button
       class="btn btn-primary"
       routerLink="/nuevaskill"
@@ -13,17 +13,14 @@
   </div>
 
   <div class="d-flex flex-wrap mx-auto">
-    <article
-      *ngFor="let skill of skills"
-      class="d-flex flex-column align-items-center m-5"
-    >
+    <article *ngFor="let skill of skills" class="">
       <circle-progress
         [percent]="skill.porcentaje"
         [radius]="100"
         [outerStrokeWidth]="16"
         [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#78C000'"
-        [innerStrokeColor]="'#C7E596'"
+        [outerStrokeColor]="'#A239CA'"
+        [innerStrokeColor]="'#bdf366'"
         [animation]="true"
         [animationDuration]="300"
         [title]="skill.nombre"

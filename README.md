@@ -1,27 +1,35 @@
-# ProyectoPortfolio
+# Proyecto Final YoProgramo: Portfolio personal ![logo](https://i.postimg.cc/ydmMR6wT/Dise-o-sin-t-tulo-17.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+Proyecto frontend generado con [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3, desarrollado como proyecto final para la aprobación de la cusada de Argentina Programa, fase 2: YoProgramo.
 
-## Development server
+# Tecnologias utilizadas 🔧
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- HTML5 ✔️
+- CSS3 ✔️
+- TypeScript ✔️
+- Angular ✔️
+- Framework de estilos: Bootstrap 5 ✔️
 
-## Code scaffolding
+## Descarga o clona este proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Puedes descargarlo directamente desde este repositorio en el botón Code >> Download ZIP o con el comando:
 
-## Build
+### `git clone https://github.com/BeluzitaRomero/Frontend-portfolio.git`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deploy
 
-## Running unit tests
+Echa un vistazo a la app 🔍 haciendo click aquí 👉🏽[https://frontend-portfolio-romero.web.app/]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### ATENCIÓN 🚨
 
-## Running end-to-end tests
+Para poder levantar la app, primero tienes que instalar las dependencias mediante el comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### `npm install`
 
-## Further help
+## Modo desarrollo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Luego podrás correr la app en modo desarrollador mediante comando:
+
+### `ng serve`
+
+Esto abrirá [http://localhost:4200](http://localhost:4200) para ver en el navegador.

@@ -5,3 +5,35 @@
 .titulo-pryecto {
   width: 80%;
 }
+
+.img-proyecto {
+  width: 100%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+:hover {
+  opacity: 1;
+}
+
+.div-img-proyecto {
+  -webkit-box-shadow: 11px 10px 35px -6px rgba(161, 57, 202, 0.82);
+  -moz-box-shadow: 11px 10px 35px -6px rgba(161, 57, 202, 0.82);
+  box-shadow: 11px 10px 35px -6px rgba(161, 57, 202, 0.82);
+  height: fit-content;
+}
+
+.link-deploy,
+.link-repo {
+  margin-top: 3rem;
+}
+
+.links-proyectos {
+  font-size: 1.3rem;
+  color: #e7dfdd;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icono-proyecto {
+  width: 3rem;
+}

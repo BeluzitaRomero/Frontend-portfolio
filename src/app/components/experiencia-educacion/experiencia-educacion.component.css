@@ -1,0 +1,19 @@
+table {
+  color: #e7dfdd;
+}
+
+.imagen-tabla {
+  background-color: white;
+}
+
+.experiencia {
+  padding-bottom: 3rem;
+}
+
+.tabla-columnas {
+  font-size: 1.6rem;
+}
+
+.tabla-descripcion {
+  font-size: 1.5rem;
+}

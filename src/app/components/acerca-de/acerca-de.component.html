@@ -1,4 +1,4 @@
-<section class="card">
+<section class="container m-auto seccion">
   <div class="contenido-seccion">
     <!--Data binding:  property binding para traer data de atributos como el src-->
     <!-- se usan corchetes en el atributo, comillas para el valor -->
@@ -10,17 +10,12 @@
       class="fa-regular fa-pen-to-square mx-3"
     ></i>
 
-    <h1>{{ persona.nombre }} {{ persona.apellido }}</h1>
-    <p>Desarrolladora Fullstack Jr</p>
+    <h1 class="nombre-persona">{{ persona.nombre }} {{ persona.apellido }}</h1>
+    <h2>Desarrolladora Fullstack Jr</h2>
     <div class="info">
       <div>
         <p>{{ persona.localidad }}, {{ persona.pais }}</p>
       </div>
-    </div>
-    <div>
-      <button type="button" class="btn btn-primary">Tengo interes en</button>
-      <button type="button" class="btn btn-light">Añadir seccion</button>
-      <button type="button" class="btn btn-light">Mas</button>
     </div>
   </div>
   <div class="contenido-seccion">

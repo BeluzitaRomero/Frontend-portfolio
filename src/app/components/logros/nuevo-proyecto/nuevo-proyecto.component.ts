@@ -14,6 +14,9 @@ export class NuevoProyectoComponent implements OnInit {
   linkDeployProyecto: string = '';
   linkRepoProyecto: string = '';
   descripcionProyecto: string = '';
+  img1: string = '';
+  img2: string = '';
+  img3: string = '';
   constructor(private sProyecto: SProyectoService, private router: Router) {}
 
   ngOnInit(): void {}
@@ -22,7 +25,10 @@ export class NuevoProyectoComponent implements OnInit {
       this.nombreProyecto,
       this.linkDeployProyecto,
       this.linkRepoProyecto,
-      this.descripcionProyecto
+      this.descripcionProyecto,
+      this.img1,
+      this.img2,
+      this.img3
     );
 
     this.sProyecto.save(proyecto).subscribe(
