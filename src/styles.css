@@ -73,13 +73,42 @@ p {
   width: 2rem;
 }
 
+.show-btn {
+  display: none;
+}
+.hide {
+  display: block;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) {
   html {
     font-size: 65%;
   }
-  nav {
+  nav div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem;
+  }
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+
+  .show-btn {
+    display: block;
+  }
+  .logo-arg {
+    width: 60;
+  }
+
+  nav .toggle-nav {
+    width: 3rem;
+    margin: auto;
+    opacity: 0.5;
   }
 }

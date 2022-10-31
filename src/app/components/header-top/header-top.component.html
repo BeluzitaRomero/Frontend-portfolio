@@ -1,35 +1,70 @@
-<nav class="d-flex justify-content-between align-items-center">
-  <img src="https://i.postimg.cc/ydmMR6wT/Dise-o-sin-t-tulo-17.png" alt="" />
-  <ul
-    class="d-flex justify-content-center align-items-center list-nav-items mb-0"
-  >
-    <li>
-      <a href="https://www.facebook.com/beluzita.peleadora/" target="_blank"
-        ><img src="https://i.postimg.cc/SsnwZ72D/facebook.png" alt=""
-      /></a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/beluzita_romero/" target="_blank"
-        ><img src="https://i.postimg.cc/rFjQrRzm/instagram.png" alt=""
-      /></a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/ana-bel%C3%A9n-romero-b0934821a/"
-        target="_blank"
-        ><img
-          style="background-color: white; border-radius: 0.5rem"
-          src="https://i.postimg.cc/MHHmsFcL/174857.png"
-          alt=""
-      /></a>
-    </li>
-    <li>
-      <button class="btn btn-primary" (click)="login()" *ngIf="!isLogged">
-        Ingresar
-      </button>
-      <button class="btn btn-primary" (click)="onLogOut()" *ngIf="isLogged">
-        Cerrar sesión
-      </button>
-    </li>
-  </ul>
+<nav>
+  <div class="d-flex justify-content-between align-items-center">
+    <img
+      class="logo-arg"
+      src="https://i.postimg.cc/ydmMR6wT/Dise-o-sin-t-tulo-17.png"
+      alt=""
+    />
+    <ul
+      [className]="
+        !showNav
+          ? 'd-flex justify-content-center align-items-center list-nav-items mb-0 hide '
+          : 'd-flex justify-content-center align-items-center list-nav-items mb-0  '
+      "
+    >
+      <li>
+        <a href="https://www.facebook.com/beluzita.peleadora/" target="_blank"
+          ><img src="https://i.postimg.cc/SsnwZ72D/facebook.png" alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/beluzita_romero/" target="_blank"
+          ><img src="https://i.postimg.cc/rFjQrRzm/instagram.png" alt=""
+        /></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/ana-bel%C3%A9n-romero-b0934821a/"
+          target="_blank"
+          ><img
+            style="background-color: white; border-radius: 0.5rem"
+            src="https://i.postimg.cc/MHHmsFcL/174857.png"
+            alt=""
+        /></a>
+      </li>
+      <li>
+        <a href="https://github.com/BeluzitaRomero" target="_blank"
+          ><img
+            style="border-radius: 50%"
+            src="https://i.postimg.cc/mrZJZPmF/360-F-250305943-s-DC6la1-N1f-Dl3b-Lgf-Lx-Ok-Qw-It-Iodsd-Mb.jpg"
+            alt=""
+        /></a>
+      </li>
+
+      <li>
+        <button class="btn" (click)="login()" *ngIf="!isLogged">
+          Ingresar
+        </button>
+        <button class="btn" (click)="onLogOut()" *ngIf="isLogged">
+          Cerrar sesión
+        </button>
+      </li>
+    </ul>
+    <button class="btn show-btn mt-3" (click)="toggleNav()">
+      <svg
+        width="25"
+        height="10"
+        viewBox="-2.5 -5 75 60"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0 l35,50 l35,-50"
+          fill="none"
+          stroke="white"
+          stroke-linecap="round"
+          stroke-width="5"
+        />
+      </svg>
+    </button>
+  </div>
 </nav>

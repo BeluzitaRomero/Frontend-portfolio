@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { TokenService } from 'src/app/services/token.service';
 
 @Component({
@@ -8,13 +9,17 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./header-top.component.css'],
 })
 export class HeaderTopComponent implements OnInit {
-  isLogged = false;
+  isLogged: boolean = false;
+  showNav: boolean = false;
+  size: number;
+
   constructor(private router: Router, private toeknService: TokenService) {}
 
   ngOnInit(): void {
     this.toeknService.getToken()
       ? (this.isLogged = true)
       : (this.isLogged = false);
+    // this.onResize(window);
   }
 
   login() {
@@ -24,5 +29,14 @@ export class HeaderTopComponent implements OnInit {
   onLogOut() {
     this.toeknService.logOut();
     window.location.reload();
+  }
+
+  toggleNav() {
+    this.showNav = !this.showNav;
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    console.log(this.size);
+    this.size = event.target.innerWidth;
   }
 }
