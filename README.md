@@ -12,15 +12,15 @@ Este repositorio pertenece al desarrollo frontend del mismo, generado con [Angul
 - Angular ✔️
 - Framework de estilos: Bootstrap 5 ✔️
 
+## Deploy
+
+Echa un vistazo a la app 🔍 haciendo click aquí 👉🏽[https://frontend-portfolio-romero.web.app/]
+
 ## Descarga o clona este proyecto
 
 Puedes descargarlo directamente desde este repositorio en el botón Code >> Download ZIP o con el comando:
 
 ### `git clone https://github.com/BeluzitaRomero/Frontend-portfolio.git`
-
-## Deploy
-
-Echa un vistazo a la app 🔍 haciendo click aquí 👉🏽[https://frontend-portfolio-romero.web.app/]
 
 ### ATENCIÓN 🚨
 
