@@ -1,6 +1,8 @@
 # Proyecto Final YoProgramo: Portfolio personal ![logo](https://i.postimg.cc/ydmMR6wT/Dise-o-sin-t-tulo-17.png)
 
-Proyecto frontend generado con [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3, desarrollado como proyecto final para la aprobación de la cusada de Argentina Programa, fase 2: YoProgramo.
+Portfolio personal fullstack desarrollado como proyecto final para la aprobación de la cusada de Argentina Programa, fase 2: YoProgramo.
+
+Este repositorio pertenece al desarrollo frontend del mismo, generado con [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3
 
 # Tecnologias utilizadas 🔧
 
