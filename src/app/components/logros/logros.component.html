@@ -29,13 +29,13 @@
         <i
           *ngIf="isAdmin.length > 1"
           routerLink="/editProyecto/{{ proyecto.id }}"
-          class="fa-regular fa-pen-to-square mx-3"
+          class="fa-regular fa-pen-to-square mx-3 icono"
         ></i>
 
         <i
           *ngIf="isAdmin.length > 1"
           (click)="deleteProyecto(proyecto.id)"
-          class="fa-regular fa-trash-can mx-3"
+          class="fa-regular fa-trash-can mx-3 icono"
         ></i>
       </div>
     </div>
@@ -95,7 +95,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div> -->
-        <img class="img-proyecto" [src]="proyecto.img1" alt="" />
+        <img class="img-proyecto img-fluid" [src]="proyecto.img1" alt="" />
       </div>
     </div>
   </div>

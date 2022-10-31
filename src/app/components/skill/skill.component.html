@@ -1,4 +1,4 @@
-<section class="container m-auto">
+<section class="container">
   <div
     class="contenido-seccion d-flex justify-content-between align-items-center"
   >
@@ -12,18 +12,28 @@
     </button>
   </div>
 
-  <div class="d-flex flex-wrap mx-auto">
-    <article *ngFor="let skill of skills" class="">
+  <div class="row mb-5">
+    <article
+      *ngFor="let skill of skills"
+      class="col-sm-6 col-md-4 col-lg-4 d-flex flex-column align-items-center my-3"
+    >
       <circle-progress
         [percent]="skill.porcentaje"
         [radius]="100"
-        [outerStrokeWidth]="16"
+        [outerStrokeWidth]="10"
         [innerStrokeWidth]="8"
-        [outerStrokeColor]="'#A239CA'"
-        [innerStrokeColor]="'#bdf366'"
+        [innerStrokeColor]="'rgba(228,30,221,0.76)'"
+        [outerStrokeColor]="'rgba(17,239,247,0.50)'"
+        titleColor="#e7dfdd"
+        unitsColor="#e7dfdd"
+        [showSubtitle]="false"
+        [showUnits]="false"
         [animation]="true"
         [animationDuration]="300"
         [title]="skill.nombre"
+        [backgroundPadding]="10"
+        [titleFontSize]="'20'"
+        [responsive]="true"
       ></circle-progress>
       <div class=""></div>
 
@@ -31,13 +41,13 @@
         <i
           *ngIf="isAdmin.length > 1"
           routerLink="/editskill/{{ skill.id }}"
-          class="fa-regular fa-pen-to-square mx-3"
+          class="fa-regular fa-pen-to-square mx-3 icono"
         ></i>
 
         <i
           *ngIf="isAdmin.length > 1"
           (click)="deleteSkill(skill.id)"
-          class="fa-regular fa-trash-can mx-3"
+          class="fa-regular fa-trash-can mx-3 icono"
         ></i>
       </div>
     </article>

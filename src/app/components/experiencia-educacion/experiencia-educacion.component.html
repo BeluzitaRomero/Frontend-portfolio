@@ -40,14 +40,15 @@
           </td>
           <td class="tabla-descripcion">{{ experiencia.descripcionExp }}</td>
           <td *ngIf="isAdmin.length > 1">
-            <a routerLink="/editexp/{{ experiencia.id }}">
-              <i class="fa-regular fa-pen-to-square"></i>
-            </a>
+            <i
+              class="fa-regular fa-pen-to-square icono"
+              routerLink="/editexp/{{ experiencia.id }}"
+            ></i>
           </td>
           <td *ngIf="isAdmin.length > 1">
             <i
               (click)="deleteExperiencia(experiencia.id)"
-              class="fa-regular fa-trash-can"
+              class="fa-regular fa-trash-can icono"
             ></i>
           </td>
         </tr>
@@ -95,14 +96,15 @@
           </td>
           <td class="tabla-descripcion">{{ edu.descripcionEdu }}</td>
           <td *ngIf="isAdmin.length > 1">
-            <a routerLink="/editedu/{{ edu.id }}">
-              <i class="fa-regular fa-pen-to-square"></i>
-            </a>
+            <i
+              class="fa-regular fa-pen-to-square icono"
+              routerLink="/editedu/{{ edu.id }}"
+            ></i>
           </td>
           <td *ngIf="isAdmin.length > 1">
             <i
               (click)="deleteEducacion(edu.id)"
-              class="fa-regular fa-trash-can"
+              class="fa-regular fa-trash-can icono"
             ></i>
           </td>
         </tr>

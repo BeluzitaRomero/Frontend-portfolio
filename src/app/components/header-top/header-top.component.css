@@ -6,6 +6,11 @@ nav ul {
   margin: 0 0.5rem;
 }
 
+/*borar**/
 .list-nav-items li img {
+  width: 3rem;
+}
+
+.nav-item img {
   width: 3rem;
 }
