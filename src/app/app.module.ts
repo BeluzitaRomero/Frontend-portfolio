@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
 import { ExperienciaEducacionComponent } from './components/experiencia-educacion/experiencia-educacion.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogrosComponent } from './components/logros/logros.component';
@@ -33,7 +32,6 @@ import { EditProyectoComponent } from './components/logros/edit-proyecto/edit-pr
     HomeComponent,
     HeaderComponent,
     AcercaDeComponent,
-    ContactoComponent,
     ExperienciaEducacionComponent,
     LoginComponent,
     LogrosComponent,
