@@ -42,14 +42,14 @@
         <h5 class="link-deploy">Puedes ver el deploy en:</h5>
         <a
           class="links-proyectos"
-          href="https://tiendamoon.netlify.app/"
+          [href]="proyecto.linkDeployProyecto"
           target="_blank"
           >{{ proyecto.linkDeployProyecto }}</a
         >
         <h5 class="link-repo">Puedes ver el repositorio en:</h5>
         <a
           class="links-proyectos"
-          href="https://github.com/BeluzitaRomero/proyecto-react-js"
+          [href]="proyecto.linkRepoProyecto"
           target="_blank"
           >{{ proyecto.linkRepoProyecto }}</a
         >
