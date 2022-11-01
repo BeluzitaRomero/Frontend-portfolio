@@ -6,11 +6,19 @@ Este repositorio pertenece al desarrollo frontend del mismo, generado con [Angul
 
 # Tecnologias utilizadas 🔧
 
+Frontend
+
 - HTML5 ✔️
 - CSS3 ✔️
 - TypeScript ✔️
 - Angular ✔️
 - Framework de estilos: Bootstrap 5 ✔️
+
+Backend
+
+- JAVA ✔️
+- Spring Boot ✔️
+- SQL ✔️
 
 ## Deploy
 
