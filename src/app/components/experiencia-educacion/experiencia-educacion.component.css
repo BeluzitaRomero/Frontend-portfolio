@@ -4,6 +4,7 @@ table {
 
 .imagen-tabla {
   background-color: white;
+  border-radius: 50%;
 }
 
 .experiencia {

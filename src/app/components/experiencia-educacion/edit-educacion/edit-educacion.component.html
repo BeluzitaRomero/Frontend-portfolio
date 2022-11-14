@@ -1,38 +1,46 @@
 <div class="container" *ngIf="educacion">
-  <div class="row">
-    <h2 class="my-4">Editar una experiencia laboral</h2>
-
-    <form (ngSubmit)="update()" novalidate #f="ngForm">
+  <div class="row my-5">
+    <form class="formulario" (ngSubmit)="update()" novalidate #f="ngForm">
+      <h1 class="my-4 titulo-form">Editar una experiencia laboral</h1>
       <div class="form-group my-4">
-        <label for="nombreEdu" class="form-label"><b>Institucion</b></label>
+        <label for="nombreEdu" class="form-label label"
+          ><b>Institucion</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="nombreEdu"
           id="nombreEdu"
           [(ngModel)]="educacion.nombreEdu"
+          placeholder="Ingrese institucion..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="descripcionEdu" class="form-label"><b>Carrera</b></label>
+        <label for="descripcionEdu" class="form-label label"
+          ><b>Carrera</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="descripcionEdu"
           id="descripcionEdu"
           [(ngModel)]="educacion.descripcionEdu"
+          placeholder="Ingrese carrera..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="imgEdu" class="form-label"><b>Imagen(Opcional)</b></label>
+        <label for="imgEdu" class="form-label label"
+          ><b>Imagen(Opcional)</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="imgEdu"
           id="imgEdu"
           [(ngModel)]="educacion.imgEdu"
+          placeholder="Ingrese URL de imagen..."
           required
         />
       </div>

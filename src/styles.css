@@ -10,6 +10,7 @@ body {
 
 .btn {
   background-color: #4717f6;
+  font-size: 1.1rem;
   color: #e7dfdd;
   border: none;
   font-weight: 500;
@@ -24,7 +25,7 @@ a,
   padding-bottom: 3rem;
 }
 
-h1,
+.titulo,
 nav,
 .link-deploy,
 .link-repo {
@@ -81,6 +82,22 @@ p {
   opacity: 1;
 }
 
+.titulo-form {
+  text-align: center;
+}
+
+.formulario {
+  background-color: rgba(162, 57, 202, 0.6671043417366946);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 60%;
+  margin: auto;
+}
+
+.label {
+  font-size: 1.3rem;
+}
+
 @media only screen and (max-width: 768px) {
   html {
     font-size: 65%;
@@ -110,5 +127,12 @@ p {
     width: 3rem;
     margin: auto;
     opacity: 0.5;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .formulario {
+    width: 80%;
+    margin: auto;
   }
 }

@@ -1,10 +1,10 @@
 <section class="container">
-  <div class="row">
-    <h2 class="my-4">Cargar nueva skill</h2>
-    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  <div class="row my-5">
+    <form class="formulario" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <h1 class="my-4 titulo-form">Cargar nueva skill</h1>
       <div class="form-group my-4">
-        <label for="nombreExp" class="form-label"
-          ><b>Nombre de empresa</b></label
+        <label for="nombreExp" class="form-label label"
+          ><b>Nombre de skill</b></label
         >
         <input
           class="form-control shadow-sm"
@@ -12,17 +12,21 @@
           name="nombre"
           id="nombre"
           [(ngModel)]="nombre"
+          placeholder="Ingrese skill..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="porcentaje" class="form-label"><b>porcentaje </b></label>
+        <label for="porcentaje" class="form-label label"
+          ><b>Porcentaje de conocimiento</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="porcentaje"
           id="porcentaje"
           [(ngModel)]="porcentaje"
+          placeholder="Ingrese un numero..."
           required
         />
       </div>

@@ -1,9 +1,9 @@
 <section class="container">
-  <div class="row">
-    <h2 class="my-4">Cargar nuevo proyecto</h2>
-    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+  <div class="row my-5">
+    <form class="formulario" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <h1 class="my-4 titulo-form">Cargar nuevo proyecto</h1>
       <div class="form-group my-4">
-        <label for="nombreProyecto" class="form-label"
+        <label for="nombreProyecto" class="form-label label"
           ><b>Nombre del proyecto</b></label
         >
         <input
@@ -12,11 +12,12 @@
           name="nombreProyecto"
           id="nombreProyecto"
           [(ngModel)]="nombreProyecto"
+          placeholder="Ingrese nombre del proyecto..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="linkDeployProyecto" class="form-label"
+        <label for="linkDeployProyecto" class="form-label label"
           ><b>Link al deploy</b></label
         >
         <input
@@ -25,11 +26,12 @@
           name="linkDeployProyecto"
           id="linkDeployProyecto"
           [(ngModel)]="linkDeployProyecto"
+          placeholder="Ingrese URL del deploy..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="linkRepoProyecto" class="form-label"
+        <label for="linkRepoProyecto" class="form-label label"
           ><b>Link al Repositorio</b></label
         >
         <input
@@ -38,44 +40,52 @@
           name="linkRepoProyecto"
           id="linkRepoProyecto"
           [(ngModel)]="linkRepoProyecto"
+          placeholder="Ingrese URL del repositorio..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="img1" class="form-label"><b>Imagen 1:</b></label>
+        <label for="img1" class="form-label label"><b>Imagen 1:</b></label>
         <input
           class="form-control shadow-sm"
           type="text"
           name="img1"
           id="img1"
           [(ngModel)]="img1"
+          placeholder="Ingrese URL de imagen..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="img2" class="form-label"><b>Imagen 2 (opcional)</b></label>
+        <label for="img2" class="form-label label"
+          ><b>Imagen 2 (opcional)</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="img2"
           id="img2"
           [(ngModel)]="img2"
+          placeholder="Ingrese URL de imagen..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="img3" class="form-label"><b>Imagen 3 (opcional)</b></label>
+        <label for="img3" class="form-label label"
+          ><b>Imagen 3 (opcional)</b></label
+        >
         <input
           class="form-control shadow-sm"
           type="text"
           name="img3"
           id="img3"
           [(ngModel)]="img3"
+          placeholder="Ingrese URL de imagen..."
           required
         />
       </div>
       <div class="form-group my-4">
-        <label for="descripcionProyecto" class="form-label"
+        <label for="descripcionProyecto" class="form-label label"
           ><b>Descripción</b></label
         >
 
@@ -86,6 +96,7 @@
             name="descripcionProyecto"
             id="descripcionProyecto"
             [(ngModel)]="descripcionProyecto"
+            placeholder="Ingrese descripcion del proyecto.."
             required
             style="height: 100px"
           ></textarea>
